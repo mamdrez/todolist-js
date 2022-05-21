@@ -1,0 +1,153 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: url('fonts/Vazir-Thin.ttf');
+  src: url('fonts/Quicksand-Light.ttf'); 
+  /* src: url('fonts/Quicksand-Medium.ttf'); */
+  
+
+}
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+  background: rgb(82,10,126);
+  background: linear-gradient(90deg, rgba(82,10,126,1) 0%, rgba(121,9,98,1) 51%, rgba(5,116,139,1) 100%);
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  min-height: 100vh;
+}
+header {
+  font-size: 2rem;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.516);
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  color: #f7fffe;
+  background: transparent;
+  border: #f7fffe 1px solid;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.519);
+ 
+}
+form input {
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+}
+form button {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+form button {
+  color: #ffffff;
+  background: transparent;
+  
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background: #ffffff;
+  color: #780770;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+  border-radius: 10px;
+}
+.todo {
+  margin: 0.5rem;
+  background: transparent;
+  border: #f7fffe 1px solid;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.519);
+  font-size: 1.5rem;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease; 
+}
+.filter-todo {
+  padding: 1rem;
+}
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  background: transparent;
+  color: rgba(255, 252, 252, 0.914);
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.complete-btn {
+  background: rgba(11, 212, 162, 0.296);
+}
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  background: transparent;
+  border: #f7fffe 1px solid;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.519);
+  border-radius: 10px;
+  color: #ffffff;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  width: 12rem;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.519);
+}
+
+.filter-op{
+  color: #000000;
+  font-weight: bold;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: none;
+}
